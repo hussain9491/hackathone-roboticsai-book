@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://hackathone-robotics-ai-book.vercel.app/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -35,38 +35,28 @@ const config: Config = {
     locales: ['en'],
   },
 
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/agentic-book/physical-ai-humanoid-robotics',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/agentic-book/physical-ai-humanoid-robotics',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      } satisfies Preset.Options,
-    ],
+ presets: [
+  [
+    'classic',
+    {
+      docs: {
+        sidebarPath: './sidebars.ts',
+        editUrl:
+          'https://github.com/agentic-book/physical-ai-humanoid-robotics',
+      },
+      blog: false,
+      theme: {
+        customCss: './src/css/custom.css',
+      },
+      sitemap: {
+        changefreq: 'weekly',
+        priority: 0.5,
+        filename: 'sitemap.xml',
+      },
+    } satisfies Preset.Options,
   ],
+],
+
 
   themeConfig: {
     // Replace with your project's social card
@@ -87,7 +77,6 @@ const config: Config = {
           position: 'left',
           label: 'Textbook',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/agentic-book/physical-ai-humanoid-robotics',
           label: 'GitHub',
@@ -127,10 +116,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/agentic-book/physical-ai-humanoid-robotics',

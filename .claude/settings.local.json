@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm install @tailwindcss/postcss)"
+      "Bash(npm install @tailwindcss/postcss)",
+      "Bash(npm run build)",
+      "Bash(uv sync)"
     ]
   }
 }
