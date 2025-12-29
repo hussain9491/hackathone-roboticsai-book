@@ -1,0 +1,258 @@
+/* Custom content styling for the Physical AI & Humanoid Robotics textbook */
+
+/* Typography */
+html {
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Space Grotesk', sans-serif;
+}
+
+code, pre, kbd, samp {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Wide line spacing for long reading */
+.markdown {
+  line-height: 1.8;
+}
+
+/* Callout styling */
+.alert {
+  border-radius: 8px;
+  border-left-width: 4px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.alert--concept {
+  border-left-color: #00E5FF;
+  background-color: rgba(0, 229, 255, 0.05);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.alert--mechanism {
+  border-left-color: #7C4DFF;
+  background-color: rgba(124, 77, 255, 0.05);
+  border: 1px solid rgba(124, 77, 255, 0.2);
+}
+
+.alert--experiment {
+  border-left-color: #FF6B6B;
+  background-color: rgba(255, 107, 107, 0.05);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.alert--definition {
+  border-left-color: #4ECDC4;
+  background-color: rgba(78, 205, 196, 0.05);
+  border: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.alert--important {
+  border-left-color: #FFE66D;
+  background-color: rgba(255, 230, 109, 0.05);
+  border: 1px solid rgba(255, 230, 109, 0.2);
+}
+
+/* Figure styling */
+.figure {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.figure img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--ifm-font-color-base-secondary);
+  text-align: center;
+}
+
+/* Code block styling */
+.prism-code {
+  border-radius: 8px;
+  padding: 1rem !important;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background: var(--ifm-background-surface-color) !important;
+  border: 1px solid var(--ifm-border-color);
+}
+
+/* Copy button styling */
+.theme-code-block {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table styling */
+.markdown table {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--ifm-border-color);
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  border-color: var(--ifm-border-color);
+}
+
+.markdown table th {
+  background-color: rgba(18, 24, 38, 0.5);
+}
+
+/* Sidebar styling */
+.menu {
+  background-color: var(--ifm-background-color);
+  background: linear-gradient(180deg, #0B0E14 0%, #121826 100%);
+}
+
+.menu__list-item-collapsible {
+  background-color: transparent;
+}
+
+.menu__link {
+  color: var(--ifm-font-color-base-secondary);
+  border-radius: 6px;
+  margin: 2px 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.menu__link:hover {
+  background-color: rgba(0, 229, 255, 0.1);
+  color: var(--ifm-color-primary);
+}
+
+.menu__link--active {
+  background-color: rgba(0, 229, 255, 0.15);
+  color: var(--ifm-color-primary);
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* Chapter numbering in sidebar */
+.menu__list-item .menu__link::before {
+  content: attr(data-chapter-number);
+  position: absolute;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 229, 255, 0.2);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+/* Chapter categories */
+.menu__list-item-collapsible .menu__link::before {
+  content: attr(data-chapter-number);
+  position: absolute;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(124, 77, 255, 0.2);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--ifm-color-secondary);
+}
+
+
+/* Content container styling */
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module {
+  padding-top: 1rem;
+}
+
+/* Doc article styling */
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  color: var(--ifm-color-primary);
+  margin-top: 2rem;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--ifm-background-color);
+  border-top: 1px solid var(--ifm-border-color);
+}
+
+/* Navigation arrows */
+.pagination-nav__link {
+  border: 1px solid var(--ifm-border-color);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.2);
+}
+
+/* Search bar styling */
+.navbar__search-input {
+  border-radius: 6px;
+  border: 1px solid var(--ifm-border-color);
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+.navbar__search-input::placeholder {
+  color: var(--ifm-font-color-base-secondary);
+}
+
+/* Breadcrumb styling */
+.theme-edit-this-page {
+  color: var(--ifm-color-primary);
+}
+
+.theme-edit-this-page:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+/* Dark theme specific adjustments */
+html[data-theme='dark'] .alert {
+  background-color: rgba(18, 24, 38, 0.7);
+}
+
+/* Math equations styling */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ifm-border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ifm-color-primary);
+}

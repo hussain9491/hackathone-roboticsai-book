@@ -15,7 +15,7 @@ QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_KEY = os.getenv("QDRANT_KEY")
 cohere_client = cohere.Client(os.getenv("COHERE_API_KEY"))
 
-SITEMAP_URL = "https://hackathone-robotics-ai-book.vercel.app/sitemap.xml"
+SITEMAP_URL = "https://hackathone-roboticsai-book.vercel.app/sitemap.xml"
 COLLECTION_NAME = "hackathone-Q4-book"
 
 EMBED_MODEL = "embed-english-v3.0"

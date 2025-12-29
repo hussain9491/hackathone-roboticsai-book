@@ -72,6 +72,7 @@ If the answer is not in the retrieved content, say "I don't know".
 
 class ChatRequest(BaseModel):
     message: str
+    context: dict = None
 
 class ChatResponse(BaseModel):
     response: str

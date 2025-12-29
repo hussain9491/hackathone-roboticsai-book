@@ -5,7 +5,7 @@ load_dotenv()
 
 app = FastAPI(
     title="Unified Backend API",
-    description="AI Chat + Urdu Translation",
+    description="AI Chat",
     version="1.0.0",
 )
 
