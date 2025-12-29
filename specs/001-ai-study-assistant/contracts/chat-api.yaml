@@ -1,0 +1,25 @@
+# API Contract: AI Study Assistant
+
+## Chat Endpoint
+```
+POST /agent/chat
+```
+
+### Request
+```json
+{
+  "message": "string (user message content)"
+}
+```
+
+### Response
+```json
+{
+  "response": "string (AI-generated response)",
+  "status": "string (success|error)"
+}
+```
+
+### Error Responses
+- `400 Bad Request`: Missing message field
+- `500 Internal Server Error`: AI service error
